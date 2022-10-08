@@ -1,0 +1,27 @@
+*  Liste des installations à faire en partant d'une machine vièrge :
+
+pip install psycopg2-binary
+pip install tornado
+
+# Télécharger Fournaise:
+https://orikafr.sharepoint.com/:u:/s/DevO4Analytics/ESo-81eeDQFJpOsSsLy7BJYB1dPPIHZp2Vv1lSwxj5e4yg?e=hAMgiP
+pip install --user  ./fournaise-1.275.tar
+
+sudo apt-get install libpq-dev python3-dev 
+pip install momoko
+pip install pycrypto
+pip install pendulum
+
+################ base de données 
+
+sudo apt install postgresql
+createdb -U orka -h localhost -E UNICODE -T template0 o4act  
+sudo -u postgres createuser -s -P orka  
+psql -d o4act -U orka -h localhost   
+
+psql -U orka -h localhost o4act <  o4act/databases/o4act.dump
+
+
+
+
+
