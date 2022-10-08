@@ -3,10 +3,6 @@
 pip install psycopg2-binary
 pip install tornado
 
-# Télécharger Fournaise:
-https://orikafr.sharepoint.com/:u:/s/DevO4Analytics/ESo-81eeDQFJpOsSsLy7BJYB1dPPIHZp2Vv1lSwxj5e4yg?e=hAMgiP
-pip install --user  ./fournaise-1.275.tar
-
 sudo apt-get install libpq-dev python3-dev 
 pip install momoko
 pip install pycrypto
