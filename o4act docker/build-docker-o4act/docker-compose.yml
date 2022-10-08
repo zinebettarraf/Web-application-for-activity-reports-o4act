@@ -1,0 +1,24 @@
+version: "2"
+services:
+
+  o4act:
+    image: "o4act"
+    build:
+      context: build-o4act
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db-o4act
+  db-o4act:
+    image: "postgres:13-alpine"
+    volumes:
+      - ./pgdata-o4act:/var/lib/postgresql/data
+      # create avolume in order not to lose data when the docker machine is off .
+      # /var/lib/postgresql/data where postgresql server saves the data 
+      # cat build-o4act/o4act/databases/data_vierge.dump | grep -v DROP | grep -v grep > build-o4act/docker-entrypoint-initdb.d/init.sql
+      - ./build-o4act/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    environment:
+      - POSTGRES_USER=orka
+      - POSTGRES_PASSWORD=orika
+      - POSTGRES_DB=o4act

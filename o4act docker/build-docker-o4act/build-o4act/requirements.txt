@@ -1,0 +1,7 @@
+psycopg2-binary
+tornado==5.1
+momoko==2.2.5.1
+simplejson
+pycrypto
+pendulum
+./fournaise-1.275.tar.gz
