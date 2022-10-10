@@ -45,7 +45,7 @@ This application also offers an advanced search filter. It is an application tha
 </p>
 
 <p align="center">
-<img src="pics/display.png"  width="700"  height="400"/>
+<img src="pics/quick display.png"  width="700"  height="400"/>
 </p>
 
 <p align="center">
