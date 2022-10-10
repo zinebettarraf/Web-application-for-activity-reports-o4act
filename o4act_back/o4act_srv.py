@@ -22,7 +22,7 @@ define("port", default=4000, help="run on the given secure port", type=int)
 define("listen_address", default='0.0.0.0', help="listen address", type=str)
 define("dbuser", default='orka', help="db user", type=str)
 define("dbport", default=5432, help="db port", type=int)   #port postgres
-define("dbname", default='o4act', help="db name", type=str)
+define("dbname", default='pics', help="db name", type=str)
 define("dbhost", default='localhost', help="db host", type=str)
 parse_command_line()
 
@@ -127,7 +127,7 @@ class IndexHandler(BaseHandler):
             
     @gen.coroutine
     def get(self , path = ''):
-        if path == 'o4act':
+        if path == 'pics':
             self.render("index.html")
 
 

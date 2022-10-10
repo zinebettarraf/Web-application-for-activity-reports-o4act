@@ -28,7 +28,7 @@ git_link ="http://10.0.0.2:10100/orikaly/"
 dir2 = "o4act_dev"
 
 if not os.path.exists(dir2):
-    os.system("git clone " + git_link + "o4act.git" +"  "+ "o4act_dev")
+    os.system("git clone " + git_link + "pics.git" +"  "+ "o4act_dev")
     os.chdir(dir2)
     os.system("git checkout development")
 else:
@@ -37,14 +37,14 @@ else:
 os.chdir("..")
 
 
-if not os.path.exists("o4act"):
-    os.mkdir("o4act")
+if not os.path.exists("pics"):
+    os.mkdir("pics")
 
 # logging.info(os.system("pwd"))
 
-os.system("sh ../../web-build-o4act.sh")
+os.system("sh ../../web-build-pics.sh")
 
-os.chdir("o4act")
+os.chdir("pics")
 
 os.system("rsync -av --exclude='tests' --exclude='tools/replace.py' --exclude='tools/web-build.sh' --exclude='README.md' ../o4act_dev/o4act_back/* . ")
 
@@ -59,4 +59,4 @@ if not os.path.exists("pkgs"):
 
 os.chdir("tmp/build")
 
-os.system("tar -cjvf ../../pkgs/o4act_"+version+".tar.gz o4act")
+os.system("tar -cjvf ../../pkgs/o4act_"+version+".tar.gz pics")
